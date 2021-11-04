@@ -1,4 +1,3 @@
-const { response } = require('express');
 const knex = require('../models/connection');
 
 module.exports = {

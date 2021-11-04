@@ -12,15 +12,12 @@ routes.get('/device/:id', devicesController.fetchOne);
 
 routes.post('/device', devicesController.insertDevice);
 
-
 routes.delete('/device/:id', devicesController.deleteDevice);
-/*
-routes.get('/categories', Controller);
 
-routes.post('/categories', Controller);
+routes.get('/categories', categoriesController.fetchAll);
 
-routes.delete('/categories/:id', Controller);
+routes.post('/categories', categoriesController.insertCategory);
 
-*/
+routes.delete('/categories/:id', categoriesController.deleteCategory);
 
 module.exports = routes;
