@@ -12,9 +12,9 @@ routes.get('/device/:id', devicesController.fetchOne);
 
 routes.post('/device', devicesController.insertDevice);
 
-/*
-routes.delete('/device/:id', Controller);
 
+routes.delete('/device/:id', devicesController.deleteDevice);
+/*
 routes.get('/categories', Controller);
 
 routes.post('/categories', Controller);

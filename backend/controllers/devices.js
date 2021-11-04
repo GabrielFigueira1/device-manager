@@ -27,5 +27,12 @@ module.exports = {
       });
 
     return res.json(data);
+  },
+
+  async deleteDevice(req, res){
+    const device = await knex('devices')
+    .where('id', req.params.id).del();
+
+    return res.json(device);
   }
 }
