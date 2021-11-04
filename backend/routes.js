@@ -9,9 +9,10 @@ const categoriesController = require('./controllers/categories');
 routes.get('/devices', devicesController.fetchAll);
 
 routes.get('/device/:id', devicesController.fetchOne);
-/*
-routes.post('/device', Controller);
 
+routes.post('/device', devicesController.insertDevice);
+
+/*
 routes.delete('/device/:id', Controller);
 
 routes.get('/categories', Controller);

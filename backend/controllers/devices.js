@@ -15,6 +15,17 @@ module.exports = {
       .where('id', req.params.id);
       
     return res.json(device);
-  }
+  },
 
+  async insertDevice(req, res){
+    const { color, partNumber, category_id } = req.body;
+    const data = await knex('devices')
+      .insert({
+        color,
+        partNumber,
+        category_id
+      });
+
+    return res.json(data);
+  }
 }
