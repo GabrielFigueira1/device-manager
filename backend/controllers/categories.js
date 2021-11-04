@@ -10,21 +10,19 @@ module.exports = {
     },
 
   async insertCategory(req, res){
-    const { color, partNumber, category_id } = req.body;
-    const data = await knex('devices')
+    const { name } = req.body;
+    const data = await knex('categories')
       .insert({
-        color,
-        partNumber,
-        category_id
+        name
       });
 
     return res.json(data);
   },
 
   async deleteCategory(req, res){
-    const device = await knex('devices')
+    const category = await knex('categories')
     .where('id', req.params.id).del();
 
-    return res.json(device);
+    return res.json(category);
   }
 }

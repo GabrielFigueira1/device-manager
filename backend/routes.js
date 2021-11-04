@@ -16,8 +16,8 @@ routes.delete('/device/:id', devicesController.deleteDevice);
 
 routes.get('/categories', categoriesController.fetchAll);
 
-routes.post('/categories', categoriesController.insertCategory);
+routes.post('/category', categoriesController.insertCategory);
 
-routes.delete('/categories/:id', categoriesController.deleteCategory);
+routes.delete('/category/:id', categoriesController.deleteCategory);
 
 module.exports = routes;
