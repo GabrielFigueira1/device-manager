@@ -7,9 +7,9 @@ const categoriesController = require('./controllers/categories');
 
 
 routes.get('/devices', devicesController.fetchAll);
-/*
-routes.get('/device', Controller);
 
+routes.get('/device/:id', devicesController.fetchOne);
+/*
 routes.post('/device', Controller);
 
 routes.delete('/device/:id', Controller);
